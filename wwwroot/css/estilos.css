@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: #2d3748;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: #2d3748;
+}
+
+.productos {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.producto {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.producto .emoji {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.producto .nombre {
+    font-weight: bold;
+    display: block;
+}
+
+.producto .precio {
+    color: #3182ce;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.producto button {
+    background: #38a169;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.producto button:hover {
+    background: #2f855a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+th {
+    background: #f7fafc;
+    color: #2d3748;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.eliminar {
+    background: #e53e3e;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    background: #c53030;
+}
+
+.vaciar {
+    background: #718096;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.vaciar:hover {
+    background: #4a5568;
+}
+
+.boleta-btn, .volver-btn {
+    display: inline-block;
+    background: #3182ce;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.boleta-btn:hover, .volver-btn:hover {
+    background: #2b6cb0;
+}
+
+.totales {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.boleta {
+    max-width: 600px;
+}
