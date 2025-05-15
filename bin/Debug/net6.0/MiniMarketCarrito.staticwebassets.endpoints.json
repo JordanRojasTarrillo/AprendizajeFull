@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "css/estilos.98lyklswxf.css",
+      "AssetFile": "css/estilos.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2363"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B5gcJu1bT9O4jIaQsSKOhymiPyh641J0KkTk1Ewbntc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 15 May 2025 04:30:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "98lyklswxf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B5gcJu1bT9O4jIaQsSKOhymiPyh641J0KkTk1Ewbntc="
+        },
+        {
+          "Name": "label",
+          "Value": "css/estilos.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/estilos.css",
+      "AssetFile": "css/estilos.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2363"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B5gcJu1bT9O4jIaQsSKOhymiPyh641J0KkTk1Ewbntc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 15 May 2025 04:30:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-B5gcJu1bT9O4jIaQsSKOhymiPyh641J0KkTk1Ewbntc="
+        }
+      ]
+    }
+  ]
+}
