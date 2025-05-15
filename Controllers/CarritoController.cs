@@ -57,6 +57,11 @@ namespace MiniMarketCarrito.Controllers
                     carrito.Add(new ItemCarrito { Producto = producto, Cantidad = 1 });
             }
             GuardarCarrito(carrito);
+
+            // Si es petición AJAX, devolver JSON para evitar recarga completa
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return Json(new { success = true });
+
             return RedirectToAction("Index");
         }
 
@@ -68,6 +73,10 @@ namespace MiniMarketCarrito.Controllers
             if (item != null)
                 carrito.Remove(item);
             GuardarCarrito(carrito);
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return Json(new { success = true });
+
             return RedirectToAction("Index");
         }
 
@@ -79,6 +88,10 @@ namespace MiniMarketCarrito.Controllers
             if (item != null && cantidad > 0)
                 item.Cantidad = cantidad;
             GuardarCarrito(carrito);
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return Json(new { success = true });
+
             return RedirectToAction("Index");
         }
 
@@ -102,6 +115,10 @@ namespace MiniMarketCarrito.Controllers
         public IActionResult Vaciar()
         {
             GuardarCarrito(new List<ItemCarrito>());
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return Json(new { success = true });
+
             return RedirectToAction("Index");
         }
     }
