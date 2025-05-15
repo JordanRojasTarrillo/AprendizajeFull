@@ -19,12 +19,6 @@ header, footer {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 2rem;
-    animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px);}
-    to { opacity: 1; transform: translateY(0);}
 }
 
 h1, h2 {
@@ -52,7 +46,7 @@ h1, h2 {
 }
 
 .producto:hover {
-    transform: scale(1.05) rotate(-2deg);
+    transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(49,130,206,0.15);
 }
 
@@ -60,13 +54,6 @@ h1, h2 {
     font-size: 2.5rem;
     display: block;
     margin-bottom: 0.5rem;
-    animation: bounceIn 0.8s;
-}
-
-@keyframes bounceIn {
-    0% { transform: scale(0.5);}
-    60% { transform: scale(1.2);}
-    100% { transform: scale(1);}
 }
 
 .producto .nombre {
@@ -87,19 +74,17 @@ h1, h2 {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s;
 }
 
 .producto button:hover {
     background: #2f855a;
-    transform: scale(1.1);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1rem;
-    animation: fadeIn 1s;
 }
 
 th, td {
@@ -124,12 +109,11 @@ th {
     padding: 0.3rem 0.7rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s;
 }
 
 .eliminar:hover {
     background: #c53030;
-    transform: scale(1.1);
 }
 
 .vaciar {
@@ -139,13 +123,11 @@ th {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 1rem;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s;
 }
 
 .vaciar:hover {
     background: #4a5568;
-    transform: scale(1.1);
 }
 
 .boleta-btn, .volver-btn {
@@ -155,13 +137,11 @@ th {
     padding: 0.7rem 1.5rem;
     border-radius: 4px;
     text-decoration: none;
-    margin-top: 1rem;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s;
 }
 
 .boleta-btn:hover, .volver-btn:hover {
     background: #2b6cb0;
-    transform: scale(1.1);
 }
 
 .totales {
