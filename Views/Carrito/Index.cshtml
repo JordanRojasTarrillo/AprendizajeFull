@@ -1,0 +1,66 @@
+@model List<MiniMarketCarrito.Models.ItemCarrito>
+@{
+    ViewBag.Title = "Carrito de Compras";
+    var productos = ViewBag.Productos as List<MiniMarketCarrito.Models.Producto>;
+}
+
+<link rel="stylesheet" href="~/css/estilos.css" />
+
+<div class="container">
+    <h1>🛒 Carrito de Compras</h1>
+    <h2>Productos disponibles</h2>
+    <div class="productos">
+        @foreach (var producto in productos)
+        {
+            <div class="producto">
+                <span class="emoji">@producto.Emoji</span>
+                <span class="nombre">@producto.Nombre</span>
+                <span class="precio">S/ @producto.Precio</span>
+                <form asp-action="Agregar" method="post">
+                    <input type="hidden" name="id" value="@producto.Id" />
+                    <button type="submit">Agregar</button>
+                </form>
+            </div>
+        }
+    </div>
+
+    <h2>Carrito</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Producto.Emoji @item.Producto.Nombre</td>
+                <td>
+                    <form asp-action="Actualizar" method="post" class="inline-form">
+                        <input type="hidden" name="id" value="@item.Producto.Id" />
+                        <input type="number" name="cantidad" value="@item.Cantidad" min="1" style="width:50px;" />
+                        <button type="submit">Actualizar</button>
+                    </form>
+                </td>
+                <td>S/ @item.Producto.Precio</td>
+                <td>S/ @(item.Producto.Precio * item.Cantidad)</td>
+                <td>
+                    <form asp-action="Eliminar" method="post" class="inline-form">
+                        <input type="hidden" name="id" value="@item.Producto.Id" />
+                        <button type="submit" class="eliminar">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <form asp-action="Vaciar" method="post">
+        <button type="submit" class="vaciar">Vaciar Carrito</button>
+    </form>
+    <a href="@Url.Action("Boleta")" class="boleta-btn">Generar Boleta</a>
+</div>
