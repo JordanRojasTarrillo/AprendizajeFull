@@ -5,6 +5,8 @@
 }
 
 <link rel="stylesheet" href="~/css/estilos.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="container">
     <h1>🛒 Carrito de Compras</h1>
@@ -12,11 +14,11 @@
     <div class="productos">
         @foreach (var producto in productos)
         {
-            <div class="producto">
+            <div class="producto animate__animated animate__fadeInUp">
                 <span class="emoji">@producto.Emoji</span>
                 <span class="nombre">@producto.Nombre</span>
                 <span class="precio">S/ @producto.Precio</span>
-                <form asp-action="Agregar" method="post">
+                <form asp-action="Agregar" method="post" class="agregar-form">
                     <input type="hidden" name="id" value="@producto.Id" />
                     <button type="submit">Agregar</button>
                 </form>
@@ -25,7 +27,7 @@
     </div>
 
     <h2>Carrito</h2>
-    <table>
+    <table id="carrito-table">
         <thead>
             <tr>
                 <th>Producto</th>
@@ -36,31 +38,152 @@
             </tr>
         </thead>
         <tbody>
-        @foreach (var item in Model)
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr class="animate__animated animate__fadeIn">
+                    <td>@item.Producto.Emoji @item.Producto.Nombre</td>
+                    <td>
+                        <form asp-action="Actualizar" method="post" class="inline-form actualizar-form">
+                            <input type="hidden" name="id" value="@item.Producto.Id" />
+                            <input type="number" name="cantidad" value="@item.Cantidad" min="1" style="width:50px;" />
+                            <button type="submit">Actualizar</button>
+                        </form>
+                    </td>
+                    <td>S/ @item.Producto.Precio</td>
+                    <td>S/ @(item.Producto.Precio * item.Cantidad)</td>
+                    <td>
+                        <form asp-action="Eliminar" method="post" class="inline-form eliminar-form">
+                            <input type="hidden" name="id" value="@item.Producto.Id" />
+                            <button type="submit" class="eliminar">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@item.Producto.Emoji @item.Producto.Nombre</td>
-                <td>
-                    <form asp-action="Actualizar" method="post" class="inline-form">
-                        <input type="hidden" name="id" value="@item.Producto.Id" />
-                        <input type="number" name="cantidad" value="@item.Cantidad" min="1" style="width:50px;" />
-                        <button type="submit">Actualizar</button>
-                    </form>
-                </td>
-                <td>S/ @item.Producto.Precio</td>
-                <td>S/ @(item.Producto.Precio * item.Cantidad)</td>
-                <td>
-                    <form asp-action="Eliminar" method="post" class="inline-form">
-                        <input type="hidden" name="id" value="@item.Producto.Id" />
-                        <button type="submit" class="eliminar">Eliminar</button>
-                    </form>
-                </td>
+                <td colspan="5">No hay productos en el carrito.</td>
             </tr>
         }
         </tbody>
     </table>
-    <form asp-action="Vaciar" method="post">
+    <form asp-action="Vaciar" method="post" id="vaciar-form">
         <button type="submit" class="vaciar">Vaciar Carrito</button>
     </form>
     <a href="@Url.Action("Boleta")" class="boleta-btn">Generar Boleta</a>
 </div>
+
+<script>
+    // Animación y feedback con SweetAlert2 para agregar producto
+    document.querySelectorAll('.agregar-form').forEach(form => {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                } else {
+                    location.reload();
+                }
+            });
+            Swal.fire({
+                icon: 'success',
+                title: '¡Producto agregado!',
+                showConfirmButton: false,
+                timer: 900,
+                toast: true,
+                position: 'top-end'
+            });
+        });
+    });
+
+    // Animación y feedback con SweetAlert2 para eliminar producto
+    document.querySelectorAll('.eliminar-form').forEach(form => {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                } else {
+                    location.reload();
+                }
+            });
+            Swal.fire({
+                icon: 'error',
+                title: 'Producto eliminado',
+                showConfirmButton: false,
+                timer: 900,
+                toast: true,
+                position: 'top-end'
+            });
+        });
+    });
+
+    // Animación y feedback con SweetAlert2 para actualizar cantidad
+    document.querySelectorAll('.actualizar-form').forEach(form => {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                } else {
+                    location.reload();
+                }
+            });
+            Swal.fire({
+                icon: 'info',
+                title: 'Cantidad actualizada',
+                showConfirmButton: false,
+                timer: 900,
+                toast: true,
+                position: 'top-end'
+            });
+        });
+    });
+
+    // Confirmación para vaciar carrito
+    document.getElementById('vaciar-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        Swal.fire({
+            title: '¿Vaciar carrito?',
+            text: "¡Esta acción no se puede deshacer!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, vaciar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(this.action, {
+                    method: 'POST'
+                }).then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    } else {
+                        location.reload();
+                    }
+                });
+                Swal.fire(
+                    '¡Carrito vaciado!',
+                    '',
+                    'success'
+                )
+            }
+        });
+    });
+</script>
