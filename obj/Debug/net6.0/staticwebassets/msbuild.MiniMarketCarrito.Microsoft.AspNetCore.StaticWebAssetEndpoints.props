@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/MiniMarketCarrito/css/estilos.6okqxqm2rb.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\estilos.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6okqxqm2rb"},{"Name":"integrity","Value":"sha256-2svbgu\u002B8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI="},{"Name":"label","Value":"_content/MiniMarketCarrito/css/estilos.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2640"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00222svbgu\u002B8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 15 May 2025 05:11:08 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MiniMarketCarrito/css/estilos.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\estilos.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2svbgu\u002B8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2640"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00222svbgu\u002B8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 15 May 2025 05:11:08 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5962"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q=\u0022"},{"Name":"Last-Modified","Value":"Fri, 16 May 2025 04:57:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MiniMarketCarrito/css/estilos.zng73xj51n.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\estilos.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zng73xj51n"},{"Name":"integrity","Value":"sha256-H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q="},{"Name":"label","Value":"_content/MiniMarketCarrito/css/estilos.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5962"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q=\u0022"},{"Name":"Last-Modified","Value":"Fri, 16 May 2025 04:57:36 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

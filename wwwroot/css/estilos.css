@@ -1,101 +1,151 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f6f8fa;
+/* Reset básico y tipografía */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f6f8fa 0%, #e2e8f0 100%);
+    color: #2d3748;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Header y Footer */
 header, footer {
-    background: #2d3748;
+    background: linear-gradient(90deg, #2d3748 60%, #3182ce 100%);
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+/* Contenedor principal */
 .container {
-    max-width: 900px;
-    margin: 2rem auto;
+    max-width: 1000px;
+    margin: 2.5rem auto;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(49,130,206,0.08);
+    padding: 2.5rem 2rem;
+    transition: box-shadow 0.2s;
 }
 
 h1, h2 {
     color: #2d3748;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Productos */
 .productos {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .producto {
-    background: #edf2f7;
-    border-radius: 6px;
-    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 10px;
+    padding: 1.2rem 1rem 1.5rem 1rem;
     text-align: center;
-    width: 150px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    width: 180px;
+    box-shadow: 0 2px 8px rgba(49,130,206,0.08);
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
     position: relative;
+    border: 1px solid #e2e8f0;
 }
 
 .producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(49,130,206,0.15);
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(49,130,206,0.18);
+    border-color: #3182ce;
 }
 
 .producto .emoji {
-    font-size: 2.5rem;
+    font-size: 3rem;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
 }
 
 .producto .nombre {
     font-weight: bold;
     display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
 }
 
 .producto .precio {
     color: #3182ce;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
     display: block;
+    font-size: 1.1rem;
 }
 
 .producto button {
-    background: #38a169;
+    background: linear-gradient(90deg, #38a169 60%, #48bb78 100%);
     color: #fff;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(56,161,105,0.08);
 }
 
 .producto button:hover {
-    background: #2f855a;
+    background: linear-gradient(90deg, #2f855a 60%, #38a169 100%);
+    box-shadow: 0 4px 16px rgba(56,161,105,0.15);
 }
 
+/* Tabla del carrito */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(49,130,206,0.06);
 }
 
 th, td {
-    padding: 0.75rem;
+    padding: 1rem;
     border-bottom: 1px solid #e2e8f0;
     text-align: center;
+    font-size: 1rem;
 }
 
 th {
-    background: #f7fafc;
+    background: #e2e8f0;
     color: #2d3748;
+    font-weight: 700;
+}
+
+tr:last-child td {
+    border-bottom: none;
 }
 
 .inline-form {
@@ -103,52 +153,129 @@ th {
 }
 
 .eliminar {
-    background: #e53e3e;
+    background: linear-gradient(90deg, #e53e3e 60%, #f56565 100%);
     color: #fff;
     border: none;
-    padding: 0.3rem 0.7rem;
-    border-radius: 4px;
+    padding: 0.4rem 0.9rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .eliminar:hover {
-    background: #c53030;
+    background: linear-gradient(90deg, #c53030 60%, #e53e3e 100%);
+    box-shadow: 0 2px 8px rgba(229,62,62,0.12);
 }
 
 .vaciar {
-    background: #718096;
+    background: linear-gradient(90deg, #718096 60%, #a0aec0 100%);
     color: #fff;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .vaciar:hover {
-    background: #4a5568;
+    background: linear-gradient(90deg, #4a5568 60%, #718096 100%);
+    box-shadow: 0 2px 8px rgba(113,128,150,0.12);
 }
 
 .boleta-btn, .volver-btn {
     display: inline-block;
-    background: #3182ce;
+    background: linear-gradient(90deg, #3182ce 60%, #63b3ed 100%);
     color: #fff;
-    padding: 0.7rem 1.5rem;
-    border-radius: 4px;
+    padding: 0.8rem 1.7rem;
+    border-radius: 5px;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0.2rem;
+    box-shadow: 0 2px 8px rgba(49,130,206,0.10);
 }
 
 .boleta-btn:hover, .volver-btn:hover {
-    background: #2b6cb0;
+    background: linear-gradient(90deg, #2b6cb0 60%, #3182ce 100%);
+    box-shadow: 0 4px 16px rgba(49,130,206,0.18);
 }
 
 .totales {
-    margin-top: 2rem;
-    font-size: 1.2rem;
+    margin-top: 2.5rem;
+    font-size: 1.25rem;
+    background: #e6fffa;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(72,187,120,0.08);
+    color: #22543d;
+    font-weight: 600;
 }
 
 .boleta {
-    max-width: 600px;
+    max-width: 650px;
+    margin: 2rem auto;
+    background: #f7fafc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(49,130,206,0.08);
+    padding: 2rem;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 0.3rem;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 0.3rem;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 2px #bee3f8;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 1.2rem 0.5rem;
+    }
+    .productos {
+        gap: 1rem;
+    }
+    .producto {
+        width: 140px;
+        padding: 1rem 0.5rem 1.2rem 0.5rem;
+    }
+    table, th, td {
+        font-size: 0.95rem;
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 0.5rem 0.2rem;
+    }
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .producto {
+        width: 90vw;
+        margin-bottom: 1rem;
+    }
+    .boleta {
+        padding: 1rem;
+    }
+    .totales {
+        font-size: 1.05rem;
+        padding: 0.7rem;
+    }
 }

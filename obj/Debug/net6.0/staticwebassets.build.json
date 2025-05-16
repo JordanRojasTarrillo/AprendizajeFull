@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7qGEe7DcATpRkbLqV3Il6iLDPhUTnbwlcgKqA0nJMMU=",
+  "Hash": "1+bw4A/eCJuTzoQi9jGOih4nNBk6lHdmpLpVJzxjK0k=",
   "Source": "MiniMarketCarrito",
   "BasePath": "_content/MiniMarketCarrito",
   "Mode": "Default",
@@ -31,59 +31,14 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6okqxqm2rb",
-      "Integrity": "2svbgu+8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI=",
+      "Fingerprint": "zng73xj51n",
+      "Integrity": "H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\estilos.css"
     }
   ],
   "Endpoints": [
-    {
-      "Route": "css/estilos.6okqxqm2rb.css",
-      "AssetFile": "C:\\Users\\Jordan\\Downloads\\Carrito\\wwwroot\\css\\estilos.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2640"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2svbgu+8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 05:11:08 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6okqxqm2rb"
-        },
-        {
-          "Name": "label",
-          "Value": "css/estilos.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2svbgu+8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI="
-        }
-      ]
-    },
     {
       "Route": "css/estilos.css",
       "AssetFile": "C:\\Users\\Jordan\\Downloads\\Carrito\\wwwroot\\css\\estilos.css",
@@ -95,7 +50,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2640"
+          "Value": "5962"
         },
         {
           "Name": "Content-Type",
@@ -103,11 +58,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2svbgu+8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI=\""
+          "Value": "\"H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 15 May 2025 05:11:08 GMT"
+          "Value": "Fri, 16 May 2025 04:57:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -117,7 +72,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2svbgu+8gpHmo7W4cBAblYAs308C6vM3/GAH89YkjnI="
+          "Value": "sha256-H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/estilos.zng73xj51n.css",
+      "AssetFile": "C:\\Users\\Jordan\\Downloads\\Carrito\\wwwroot\\css\\estilos.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5962"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 16 May 2025 04:57:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zng73xj51n"
+        },
+        {
+          "Name": "label",
+          "Value": "css/estilos.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H8fD6u1y9IMAvCYR2sOSEYycjgxMJzCqgDURxqhRT9Q="
         }
       ]
     }
