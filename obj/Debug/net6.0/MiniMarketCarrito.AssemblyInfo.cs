@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniMarketCarrito")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f02e0e2f5a08f400c8ddfb17e842fa8695131b48")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fedec4414bf8b4d09e9a4af2b9cc9a3cb017da34")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniMarketCarrito")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniMarketCarrito")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
